@@ -29,10 +29,11 @@ import java.util.*
 class WeatherActivity : AppCompatActivity() {
 
     val viewModel by lazy { ViewModelProviders.of(this).get(WeatherViewModel::class.java) }
-    androidx.drawerlayout.widget.DrawerLayout
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         if (Build.VERSION.SDK_INT >= 21) {
             val decorView = window.decorView
             decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
