@@ -30,8 +30,8 @@ class WeatherActivity : AppCompatActivity() {
 
     val viewModel by lazy { ViewModelProviders.of(this).get(WeatherViewModel::class.java) }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
         if (Build.VERSION.SDK_INT >= 21) {
@@ -127,4 +127,7 @@ class WeatherActivity : AppCompatActivity() {
         weatherLayout.visibility = View.VISIBLE
     }
 
+    fun close(){
+        drawerLayout.closeDrawers();
+    }
 }
